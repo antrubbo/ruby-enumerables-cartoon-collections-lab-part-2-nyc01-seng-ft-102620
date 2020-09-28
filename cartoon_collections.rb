@@ -17,8 +17,10 @@ def find_valid_calls(planeteer_calls)
   good_call = nil
   index = 0
   planeteer_calls.find do |call|
-    if call == valid_calls
+    if call == valid_calls[index]
       good_call = call
+    else
+      index += 1
     end
   end
   good_call
